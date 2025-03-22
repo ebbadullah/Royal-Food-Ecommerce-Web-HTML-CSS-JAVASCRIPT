@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Spartan', sans-serif;
+    }
+    h1{
+        font-size: 50px;
+        line-height: 64px;
+        color: #222;
+    }
+    h2{
+        font-size: 46px;
+        line-height: 54px;
+        color: #222;
+    }
+    h3{
+        font-size: 36px;
+        line-height: 44px;
+        color: #222;
+    }
+    h4{
+        font-size: 20px;
+        color: #222;
+    }
+    h5{
+    font-weight: 700;  
+      color: #222;
+    }
+    h6{
+        font-size: 10px;
+        line-height: 64px;
+        color: #222;
+    }
+    p{
+        font-size: 16px;
+    margin: 15px 0 20px 0 ;
+        color: #222;   
+    }
+    button.normal{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: black;
+        background-color: snow;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: 0.3s ease;
+    }
+    .section-p1{
+    padding: 40px 80px;
+    }
+    .section-m1{
+    margin: 40px 0;}
+    body{
+        width: 100%;
+        background-color: black;
+    }
+    
+    
+    #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(0, 0, 0);
+    
+    z-index: 999;
+    position: sticky;
+    left: 0;
+    top: 0;
+    }
+    .logo{
+        font-size: 24px;
+          
+          color: red;
+          white-space: nowrap;
+          border-right: 2px solid;
+          width: fit-content;
+          animation: blink-caret 0.7s step-end infinite;
+    }
+    @keyframes blink-caret {
+        from { border-color: transparent; }
+        to { border-color: rgb(0, 0, 0); }
+      }
+      
+    
+     #typing .ro1{
+        color: RED;
+        cursor: pointer;
+      }
+      
+     #typing .ro1:hover{
+        color: rgb(255, 255, 255);
+      }
+      #typing .fo1{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+      }
+      #typing .fo1:hover{
+        color: rgb(255, 0, 0);
+      }
+    
+      #typing1 .ROYAL{
+        color: red;
+      }
+      #typing1 .FOOD{
+        color: rgb(255, 255, 255);
+      }
+    #Navbar{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    #Navbar li {
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+    }
+    #Navbar li  a{
+        text-decoration: none;
+        font-size:16px ;
+        font-weight: 600;
+        color: #ffffff;
+        transition: 0.3s ease;
+    }
+    #header a{
+        color: snow;
+        text-decoration: none;
+        font-size: 30px;
+    }
+     a span {
+        color: red;
+        font-size: 29px;
+        padding-left: 10px;
+        text-decoration: none;
+    }
+    #Navbar li  a:hover,
+    #Navbar li  a.active{
+        color: rgb(201, 25, 25);
+    }
+    #Navbar li  a.active::after,#Navbar li  a:hover::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color:rgb(201, 23, 23) ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    }
+    
+    #mobile{
+    display: none;
+    align-items: center;
+    }
+    #mobile li{
+    font-size: 24px;   
+    padding-left: 20px;
+        }
+        .about-section {
+    width: 100%;
+    width: 100vh;
+    background: linear-gradient(135deg, #8b0000, #000);
+    border: 3px solid #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+.about {
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: snow;
+    animation: fadeIn 2s ease-in-out;
+}
+.about h1 span{
+    color: red;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    animation: slideUp 2s ease-in-out;
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    background-color: #070707dc;
+    padding: 20px;
+    width: 450px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: snow;
+}
+
+.info-item:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* For responsive layout */
+@media (max-width: 768px) {
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures video covers the section */
+        z-index: -1; /* Place video behind content */
+        filter: blur(4px)
+    }
+
+
+footer {
+        background-color: #7c2e2e;
+        padding: 40px 80px;
+        color: #000000;
+        font-size: 14px;
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+     
+    footer .col {
+        flex: 1;
+        margin: 20px;
+        min-width: 180px; 
+    }
+    
+    footer h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: snow;
+    }
+    
+    footer p, footer a {
+        font-size: 14px;
+        line-height: 24px;
+        color: #333;
+        text-decoration: none;
+        display: block;  /* Block layout for column-wise alignment */
+        color: #fff;
+    }
+    
+    footer p span{
+        color: red;
+    }
+    footer a:hover {
+        color: #c00;
+    }
+    
+    footer .follow .icon i {
+        font-size: 20px;
+        color: #222;
+        margin-right: 15px;
+        transition: 0.3s ease;
+    }
+    
+    footer .follow .icon i:hover {
+        color : #c00;
+    }
+    
+    footer .instal .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    footer  h2{
+        color: red;
+    }
+    footer h2 span{
+        color: snow;
+    }
+    
+    footer .instal img {
+        width: 120px;
+        margin: 10px 0;
+    }
+    
+    footer .copyright {
+        text-align: center;
+        padding: 20px 0 0 0;
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+        flex-basis: 100%;
+    }
+
+    </style>
+</head>
+<body>
+     
+    <section id="header">
+      
+        <div class="logo" id="typing"></div>
+
+   
+    <div>
+        <ul id="Navbar">
+            <li><a  href="index.html">Home</a></li>
+            <li><a  href="shop.html">Shop</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+                       <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            <span id="toggle-btn">&#9776;</span> <!-- Hamburger Icon -->
+            
+        </ul>
+    </div>
+    <div id="mobile">
+               <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+               <i id="bar" class="fa-solid fa-bars"></i>
+    </div>
+</section>
+
+<video src="/IMG/VIdeo.mp4" autoplay loop muted></video>
+
+<section id="about" class="about">
+  <div class="container">
+      <h1>About <span>Royal</span>  Food</h1>
+      <p>Welcome to Royal Food,Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur earum minima suscipit reprehenderit vel consequatur facilis tempore sapiente nisi voluptate..</p>
+      <div class="info">
+          <div class="info-item">
+              <h3>Our Story</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae possimus, ea amet veniam a nam placeat vero ex illo! Ullam?</p>
+          </div>
+          <div class="info-item">
+              <h3>Our Vision</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quam dolores perferendis deserunt adipisci nemo id dicta tempore libero blanditiis.</p>
+          </div>
+      </div>
+  </div>
+</section>
+  <!-- <section class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>At Royal Food, we offer the finest quality food ingredients to elevate your recipes. Our premium products include soya chili, baking powder, starch, and laundry essentials for your daily needs.</p>
+    </div>
+  </section> -->
+
+  <!-- <section class="products">
+    <div class="container">
+      <h2>Our Premium Products</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="/IMG/ProductImages/Rf1.jpg" alt="Soya Chilli">
+          <h3>Soya Chilli</h3>
+          <p>Enhance your dishes with our flavorful soya chili.</p>
+        </div>
+        <div class="product">
+          <img src="/IMG/ProductImages/Rf10.jpg" alt="Baking Powder">
+          <h3>Baking Powder</h3>
+          <p>Perfect for fluffy and delicious bakes.</p>
+        </div>
+        <div class="product">
+          <img src="starch.jpg" alt="Starch">
+          <h3>Starch</h3>
+          <p>Pure and reliable quality for cooking and laundry.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+<footer class="section-p1">
+    <div class="col">
+        <h2 class="logo-1">ROYAL <span>FOOD</span> </h2>
+        <h4>Contact</h4>
+        <p><strong><span> ADDRESS :</span> </strong>Baloch Colony Shara e faisal Karachi </p>
+        <p><strong><span> PHONE :</span> </strong>Baloch Colony Shara e faisal Karachi </p>
+        <p><strong><span> HOURS :</span> </strong>Baloch Colony Shara e faisal Karachi </p>
+    
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Dilivery Information</a>
+        <a href="#">PRIVICY Policy</a>
+        <a href="#">Term Condition</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    
+    <div class="col instal">
+    <h4>Instal App</h4>
+    <p>From App store and Google Play</p>
+    <div class="row">
+        <img src="/IMG/Feature/app.jpg" alt="">
+        <img src="/IMG/Feature/play.png" alt="">
+        <div>
+            <p>Secure Payment Gateways</p>
+            <img src="/IMG/Feature/pay.png" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="copyright">
+        <p>2022 All Right Reserve Royal Food </p>
+    </div>
+    </footer>
+
+    <script >
+        const text = "ROYAL  FOOD"; 
+let index = 0;
+const speed = 100;
+
+function typing() {
+  if (index < text.length) {
+    let char = text.charAt(index);
+
+   
+    if (index < 7) {
+      document.getElementById("typing").innerHTML += `<span class="ro1">${char}</span>`;
+    } else {
+      document.getElementById("typing").innerHTML += `<span class="fo1">${char}</span>`;
+    }
+
+    index++;
+    setTimeout(typing, speed);
+  } else {
+    setTimeout(() => {
+      index = 0;
+      document.getElementById("typing").innerHTML = '';
+      typing();
+    }, 2000);
+  }
+}
+
+
+
+
+typing();
+  
+
+
+
+  const text1 = "ROYAL  FOOD"; 
+  let index1 = 0;
+  const speeds = 100;
+
+  function typing1() {
+    if (index1 < text1.length) {
+      let char = text1.charAt(index1);
+
+     
+      if (index1 < 7) {
+        document.getElementById("typing1").innerHTML += `<span class="ROYAL">${char}</span>`;
+      } else {
+        document.getElementById("typing1").innerHTML += `<span class="FOOD">${char}</span>`;
+      }
+
+      index1++;
+      setTimeout(typing1, speeds);
+    } else {
+      setTimeout(() => {
+        index1 = 0;
+        document.getElementById("typing1").innerHTML = '';
+        typing1();
+      }, 2000);
+    }
+  }
+
+  typing1();
+
+    </script>
+</body>
+</html>

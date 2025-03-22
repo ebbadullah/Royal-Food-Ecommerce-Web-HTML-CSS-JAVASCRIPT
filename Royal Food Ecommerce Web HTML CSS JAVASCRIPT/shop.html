@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+    <title>Royal Food WebPage</title>
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Spartan', sans-serif;
+    }
+    h1{
+        font-size: 50px;
+        line-height: 64px;
+        color: #222;
+    }
+    h2{
+        font-size: 46px;
+        line-height: 54px;
+        color: #222;
+    }
+    h3{
+        font-size: 36px;
+        line-height: 44px;
+        color: #222;
+    }
+    h4{
+        font-size: 20px;
+        color: #222;
+    }
+    h5{
+    font-weight: 700;  
+      color: #222;
+    }
+    h6{
+        font-size: 10px;
+        line-height: 64px;
+        color: #222;
+    }
+    p{
+        font-size: 16px;
+    margin: 15px 0 20px 0 ;
+        color: #222;   
+    }
+    button.normal{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: black;
+        background-color: snow;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: 0.3s ease;
+    }
+    .section-p1{
+    padding: 40px 80px;
+    }
+    .section-m1{
+    margin: 40px 0;}
+    body{
+        width: 100%;
+        background-color: black;
+    }
+    
+    
+    #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: rgb(0, 0, 0);
+    
+    z-index: 999;
+    position: sticky;
+    left: 0;
+    top: 0;
+    }
+    .logo{
+        font-size: 24px;
+          
+          color: red;
+          white-space: nowrap;
+          border-right: 2px solid;
+          width: fit-content;
+          animation: blink-caret 0.7s step-end infinite;
+    }
+    @keyframes blink-caret {
+        from { border-color: transparent; }
+        to { border-color: rgb(0, 0, 0); }
+      }
+      
+    
+     #typing .ro1{
+        color: RED;
+        cursor: pointer;
+      }
+      
+     #typing .ro1:hover{
+        color: rgb(255, 255, 255);
+      }
+      #typing .fo1{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+      }
+      #typing .fo1:hover{
+        color: rgb(255, 0, 0);
+      }
+    
+      #typing1 .ROYAL{
+        color: red;
+      }
+      #typing1 .FOOD{
+        color: rgb(255, 255, 255);
+      }
+    #Navbar{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    #Navbar li {
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+    }
+    #Navbar li  a{
+        text-decoration: none;
+        font-size:16px ;
+        font-weight: 600;
+        color: #ffffff;
+        transition: 0.3s ease;
+    }
+    #header a{
+        color: snow;
+        text-decoration: none;
+        font-size: 30px;
+    }
+     a span {
+        color: red;
+        font-size: 29px;
+        padding-left: 10px;
+        text-decoration: none;
+    }
+    #Navbar li  a:hover,
+    #Navbar li  a.active{
+        color: rgb(201, 25, 25);
+    }
+    #Navbar li  a.active::after,#Navbar li  a:hover::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color:rgb(201, 23, 23) ;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+    }
+    
+    #mobile{
+    display: none;
+    align-items: center;
+    }
+    #mobile li{
+    font-size: 24px;   
+    padding-left: 20px;
+        }
+
+
+        #product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px ;
+    flex-wrap: wrap;
+}
+ #product1 h2,p{
+    color: snow;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+#product1 h2:hover{
+   color: #800404; 
+}
+#product1 p:hover{
+    color: #800404;
+} 
+#product1{
+    background-color: #000000;
+    text-align: center;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 225px;
+    padding: 10px 12px;
+    border: 1px solid #ff0202;
+    background-color: #8004045d;
+    border-radius:20px ;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(255, 252, 252, 0.02);
+    margin: 15px 0 ;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+
+}
+#product1 .pro .des h5{
+padding-top: 7px;
+color: #800404;
+font-size: 14px;
+}
+#product1 .pro .des i {
+font-size: 12px;
+color: rgba(243, 181, 25 );
+
+}
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #810808;
+}
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #da4885;
+    background-color: #97598463;
+    border: 1px solid #d60e39;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    margin: 15px  0 ;
+}
+
+.pagination a {
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    text-decoration: none;
+   border: 2px solid rgba(255, 0, 0, 0.568);
+   background-color: rgba(255, 0, 0, 0.61);
+    margin: 0 4px;
+}
+
+.pagination a:hover {
+    background-color: rgba(255, 0, 0, 0.438);
+    border: 2px solid rgba(255, 0, 0, 0.384);
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+
+
+footer {
+        background-color: #f9c7c7;
+        padding: 40px 80px;
+        color: #222;
+        font-size: 14px;
+        display: flex;  
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+    
+    
+footer {
+    background-color: #7c2e2e;
+    padding: 40px 80px;
+    color: #000000;
+    font-size: 14px;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+ 
+footer .col {
+    flex: 1;
+    margin: 20px;
+    min-width: 180px; 
+}
+
+footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: snow;
+}
+
+footer p, footer a {
+    font-size: 14px;
+    line-height: 24px;
+    color: #333;
+    text-decoration: none;
+    display: block;  /* Block layout for column-wise alignment */
+    color: #fff;
+}
+
+footer p span{
+    color: red;
+}
+footer a:hover {
+    color: #c00;
+}
+
+footer .follow .icon i {
+    font-size: 20px;
+    color: #222;
+    margin-right: 15px;
+    transition: 0.3s ease;
+}
+
+footer .follow .icon i:hover {
+    color : #c00;
+}
+
+footer .instal .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+footer  h2{
+    color: red;
+}
+footer h2 span{
+    color: snow;
+}
+
+footer .instal img {
+    width: 120px;
+    margin: 10px 0;
+}
+
+footer .copyright {
+    text-align: center;
+    padding: 20px 0 0 0;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    flex-basis: 100%;
+}
+    
+    </style>
+</head>
+<body>
+    
+    <section id="header">
+      
+        <div class="logo" id="typing"></div>
+
+   
+    <div>
+        <ul id="Navbar">
+            <li><a  href="index.html">Home</a></li>
+            <li><a class="active" href="shop.html" target="_blank">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a></li>
+            <span id="toggle-btn">&#9776;</span> <!-- Hamburger Icon -->
+            
+        </ul>
+    </div>
+    <div id="mobile">
+               <a href="cart.html"><i class="fa-solid fa-basket-shopping"></i></a>
+               <i id="bar" class="fa-solid fa-bars"></i>
+    </div>
+</section>
+
+
+<section id="product1"  class="section-p1">
+    <h2>Welcome To Royal Food </h2>
+    <p>Your one-stop shop for quality products at unbeatable prices!</p>
+    <div class="pro-container">
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf1.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Chilli Hot Souce</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:290</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf2.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Baking Powder</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:390</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf3.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Bread Crum</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:190</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf14.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Kewra Water</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:290</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf5.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Rose Water</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:30</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf6.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Cornflour</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:90</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf7.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Soya Souce</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:420</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf8.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Laoundry Starch</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:140</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="product1" class="section-p1">
+    
+    <div class="pro-container">
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf1.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Chilli Hot Souce</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:290</h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf2.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Baking Powder</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:390</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf3.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Bread Crum</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:190</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf14.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Kewra Water</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:290</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf5.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Rose Water</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:30</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf6.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Cornflour</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:90</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf7.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Soya Souce</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:420</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf8.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Laoundry Starch</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:140</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="product1" class="section-p1">
+    
+    <div class="pro-container">
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf1.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Chilli Hot Souce</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:290</h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf2.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Baking Powder</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:390</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf3.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Bread Crum</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:190</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf14.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Kewra Water</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:290</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf5.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Rose Water</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:30</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf6.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Cornflour</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:90</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf7.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Soya Souce</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:420</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+        <div class="pro">
+            <img src="/IMG/ProductImages/Rf8.jpg" alt="">
+            <div class="des">
+                <span>ROYAL FOOD</span>
+                <h5>Laoundry Starch</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>Rs:140</h4>
+            </div>
+            <a href="./shopP.html"><i class="fa-solid fa-cart-shopping cart" ></i></a>
+        </div>
+    </div>
+</section>
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">&raquo;</a>
+</div>
+
+<footer class="section-p1">
+    <div class="col">
+        <h2 class="logo-1">ROYAL <span>FOOD</span> </h2>
+        <h4>Contact</h4>
+        <p><strong><span> ADDRESS :</span> </strong>Baloch Colony Shara e faisal Karachi </p>
+        <p><strong><span> PHONE :</span> </strong>Baloch Colony Shara e faisal Karachi </p>
+        <p><strong><span> HOURS :</span> </strong>Baloch Colony Shara e faisal Karachi </p>
+    
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Dilivery Information</a>
+        <a href="#">PRIVICY Policy</a>
+        <a href="#">Term Condition</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+    </div>
+    
+    <div class="col instal">
+    <h4>Instal App</h4>
+    <p>From App store and Google Play</p>
+    <div class="row">
+        <img src="/IMG/Feature/app.jpg" alt="">
+        <img src="/IMG/Feature/play.png" alt="">
+        <div>
+            <p>Secure Payment Gateways</p>
+            <img src="/IMG/Feature/pay.png" alt="">
+        </div>
+    </div>
+    </div>
+    <div class="copyright">
+        <p>2022 All Right Reserve Royal Food </p>
+    </div>
+    </footer>
+
+
+
+<script>
+
+    // start Java Script //
+    
+    const text = "ROYAL  FOOD"; 
+    let index = 0;
+    const speed = 100;
+    
+    function typing() {
+      if (index < text.length) {
+        let char = text.charAt(index);
+    
+       
+        if (index < 7) {
+          document.getElementById("typing").innerHTML += `<span class="ro1">${char}</span>`;
+        } else {
+          document.getElementById("typing").innerHTML += `<span class="fo1">${char}</span>`;
+        }
+    
+        index++;
+        setTimeout(typing, speed);
+      } else {
+        setTimeout(() => {
+          index = 0;
+          document.getElementById("typing").innerHTML = '';
+          typing();
+        }, 2000);
+      }
+    }
+    
+    
+    
+    
+    typing();
+      
+    
+    
+    
+      const text1 = "ROYAL  FOOD"; 
+      let index1 = 0;
+      const speeds = 100;
+    
+      function typing1() {
+        if (index1 < text1.length) {
+          let char = text1.charAt(index1);
+    
+         
+          if (index1 < 7) {
+            document.getElementById("typing1").innerHTML += `<span class="ROYAL">${char}</span>`;
+          } else {
+            document.getElementById("typing1").innerHTML += `<span class="FOOD">${char}</span>`;
+          }
+    
+          index1++;
+          setTimeout(typing1, speeds);
+        } else {
+          setTimeout(() => {
+            index1 = 0;
+            document.getElementById("typing1").innerHTML = '';
+            typing1();
+          }, 2000);
+        }
+      }
+    
+      typing1();
+    
+    
+    
+    
+    
+      const bar = document.getElementById('bar');
+      const navbar = document.getElementById('Navbar');
+    
+      // Toggle navbar on clicking hamburger icon
+      if (bar) {
+        bar.addEventListener('click', () => {
+          if (navbar.style.display === 'flex') {
+            navbar.style.display = 'none';
+          } else {
+            navbar.style.display = 'flex';
+          }
+        });
+      }
+    
+    </script>
+</body>
+</html>
